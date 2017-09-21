@@ -1,5 +1,5 @@
-from tools.sshlogin import Sshlogin
-from tools.dev_param import dev_param
+from ..tools.sshlogin import Sshlogin
+from ..tools.dev_param import dev_param
 import argparse
 import pprint
 
