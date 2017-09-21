@@ -1,5 +1,5 @@
-from ..tools.sshlogin import Sshlogin
-from ..tools.dev_param import dev_param
+from tools.sshlogin import Sshlogin
+from tools.dev_param import dev_param
 import argparse
 import pprint
 
@@ -14,6 +14,9 @@ connection = Sshlogin(device[0],device[1],device[2])
 
 memutil = connection.sendCommand('top -b -n1|grep Mem')
 cpuutil = connection.sendCommand('top -b -n1|grep Cpu')
+
+
+connection.close()
 
 pprint.pprint(memutil)
 pprint.pprint(cpuutil)
