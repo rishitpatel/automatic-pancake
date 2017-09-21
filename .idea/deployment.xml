@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ubntserv">
+    <serverData>
+      <paths name="ubntserv">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/automatic-pancake" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
