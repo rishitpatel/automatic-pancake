@@ -1,6 +1,6 @@
 from paramiko import client
 
-class ssh:
+class Sshlogin:
         client = None
 
         def __init__(self, address, username, password):
@@ -24,4 +24,5 @@ class ssh:
                                         print(str(alldata, "utf8"))
                 else:
                         print("Connection not opened.")
-
+        def close(self):
+                self.client.close()
