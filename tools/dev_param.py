@@ -2,7 +2,7 @@ import yaml
 
 
 def dev_param(args):
-    with open('/home/rishit/device_details/device_details.yaml') as f:
+    with open('../../device_details/device_details.yaml') as f:
         devices = yaml.safe_load(f)
         f.close()
 

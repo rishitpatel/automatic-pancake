@@ -21,7 +21,7 @@ class Sshlogin:
                                                 prevdata = stdout.channel.recv(1024)
                                                 alldata += prevdata
 
-                                        print(str(alldata, "utf8"))
+                                        return str(alldata, "utf8")
                 else:
                         print("Connection not opened.")
         def close(self):
