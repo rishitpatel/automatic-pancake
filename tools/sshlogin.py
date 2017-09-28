@@ -8,6 +8,8 @@ class Sshlogin:
                 self.client = client.SSHClient()
                 self.client.set_missing_host_key_policy(client.AutoAddPolicy())
                 self.client.connect(address, username=username, password=password, look_for_keys=False)
+                self.transport = paramiko.Transport((address, 22))
+                self.transport.connect(username=username, password=password)
 
         def sendCommand(self, command):
                 if(self.client):
@@ -26,3 +28,34 @@ class Sshlogin:
                         print("Connection not opened.")
         def close(self):
                 self.client.close()
+
+        def openSh(self):
+                self.shell = self.client.()
+                self.shell = self.client.invoke_shell()
+
+## Use sendSh to send commands in Shell. Will need to open shell by
+## using openSh() before sendSh()
+        def sendSh(self, command):
+                if(self.shell):
+                        self.shell.send(command + '\n')
+                else:
+                        print("Shell is not open to run the command")
+
+                if self.shell != None and self.shell.recv_ready():
+                        alldata = self.shell.recv(1024)
+                        while self.shell.recv_ready():
+                                alldata += self.shell.recv(1024)
+                        strdata = str(alldata, "utf8")
+                        return strdata
+                else:
+                    print("Shell is not receive ready or not open")
+
+        def outSh(self):
+                if self.shell != None and self.shell.recv_ready():
+                        alldata = self.shell.recv(1024)
+                        while self.shell.recv_ready():
+                                alldata += self.shell.recv(1024)
+                        strdata = str(alldata, "utf8")
+                        return strdata
+                else:
+                    print("Shell is not receive ready or not open")

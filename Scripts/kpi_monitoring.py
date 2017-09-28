@@ -13,9 +13,9 @@ device = dev_param(usrip)
 
 connection = Sshlogin(device[0],device[1],device[2])
 
-memutil = connection.sendCommand('top -b -n1|grep Mem')
+memutil = connection.sendCommand('')
 sleep(2)
-cpuutil = connection.sendCommand('top -b -n1|grep Cpu')
+cpuutil = connection.sendCommand('')
 
 
 connection.close()
