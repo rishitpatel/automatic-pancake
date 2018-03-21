@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="aed4ac61-e2db-4107-8d64-d0235f15f84e" name="ubntserv" url="http://192.168.10.20">
-        <fileTransfer host="192.168.10.20" port="22" privateKey="C:\cygwin64\home\rishit\.ssh\id_rsa" rootFolder="/home/rishit/pythonenv" accessType="SFTP" keyPair="true">
+      <webServer id="aed4ac61-e2db-4107-8d64-d0235f15f84e" name="ubntserv" url="http://192.168.1.20">
+        <fileTransfer host="192.168.1.20" port="22" privateKey="C:\cygwin64\home\rishit\.ssh\id_rsa" rootFolder="/home/rishit/" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
